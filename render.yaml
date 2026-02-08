@@ -1,18 +1,20 @@
 services:
-  # 1. Backend API (FastAPI)
   - type: web
     name: movie-recom-api
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: TMDB_API_KEY
-        sync: false  # You must add this manually in Render dashboard
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.10.0
 
-  # 2. Frontend (Streamlit)
   - type: web
     name: movie-recom-ui
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
     envVars:
@@ -21,3 +23,5 @@ services:
           type: web
           name: movie-recom-api
           property: host
+      - key: PYTHON_VERSION
+        value: 3.10.0
