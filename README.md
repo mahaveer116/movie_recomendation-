@@ -1,105 +1,156 @@
-Movie Recommender System
-A content-based movie recommendation system built using Natural Language Processing (NLP) and cosine similarity. The system analyzes movie features to suggest similar films based on user selection.
-Features
+Movie Recommender System:
 
-Content-Based Filtering: Uses movie metadata to find similar movies
-Cosine Similarity: Measures similarity between movies using TF-IDF vectors
-Interactive UI: Clean, modern interface for browsing and discovering movies
-Multiple Recommendation Types:
+A content-based movie recommendation system built using Natural Language Processing (NLP) and cosine similarity.
+The system analyzes movie metadata to recommend films that are similar to a user-selected movie, helping users discover relevant content.
+
+Overview:
+
+This project implements a content-based filtering approach where movies are recommended based on textual similarity between their descriptions, genres, and metadata.
+It provides an intuitive and interactive web interface for browsing trending movies and exploring personalized recommendations.
+
+Features:
+
+Content-Based Filtering using movie metadata
+
+TF-IDF vectorization with cosine similarity
+
+Clean and modern user interface
+
+Multiple recommendation types:
 
 Similar Movies (TF-IDF based)
+
 Genre-based recommendations
+
 Trending movies section
 
+Technology Stack:
+
+Backend:
+Python
+FastAPI
 
 
-Technology Stack
+Data preprocessing:
+Machine Learning and NLP
+scikit-learn
+TfidfVectorizer
+cosine_similarity
+Natural Language Processing for text feature extraction
 
-Backend: Python, Flask
-Machine Learning: scikit-learn (TfidfVectorizer, cosine_similarity)
-NLP: Natural Language Processing for text feature extraction
-Data Processing: pandas, numpy
-Frontend: HTML, CSS, JavaScript
+Frontend:
+Streamlit
 
-Screenshots
-1. Home Page - Trending Movies
-The landing page displays a collection of trending movies with an intuitive search interface. Users can browse through popular titles and use the keyword search to find specific movies.
-   ![homepage](https://github.com/mahaveer116/movie_recomendation-/blob/793286193096f5bee9a3aca94681d7ee8a694ef3/homepage.png)
+Screenshots:
+1. Home Page – Trending Movies
+
+The landing page displays trending movies along with a search interface that allows users to quickly find titles of interest.
+![homepage](https://github.com/mahaveer116/movie_recomendation-/blob/793286193096f5bee9a3aca94681d7ee8a694ef3/homepage.png)
 
 2. Movie Details Page
-Detailed view of a selected movie showing the poster, release date, genres, and plot overview. This page serves as the gateway to personalized recommendations.
- ![Movie Details Page](https://github.com/mahaveer116/movie_recomendation-/blob/793286193096f5bee9a3aca94681d7ee8a694ef3/Movie%20Details%20Page.png)
+
+Displays detailed information about a selected movie, including poster, release date, genres, and overview.
+This page serves as the entry point for generating recommendations.
+![Movie Details](https://github.com/mahaveer116/movie_recomendation-/blob/793286193096f5bee9a3aca94681d7ee8a694ef3/Movie%20Details%20Page.png)
 3. Similar Movies (TF-IDF) Recommendations
-Content-based recommendations using TF-IDF vectorization and cosine similarity. The system analyzes movie descriptions and metadata to find the most similar films.
+Content-based recommendations generated using TF-IDF vectorization and cosine similarity.
 ![Similar Movies](https://github.com/mahaveer116/movie_recomendation-/blob/793286193096f5bee9a3aca94681d7ee8a694ef3/Similar%20Movies.png)
 4. Genre-Based Recommendations
-Additional recommendations based on genre matching, providing users with more options that share similar thematic elements with their selected movie.
+
+Additional recommendations based on genre matching to help users explore related content.
 ![Genre-Based](https://github.com/mahaveer116/movie_recomendation-/blob/793286193096f5bee9a3aca94681d7ee8a694ef3/Genre-Based.png)
-Dataset
-The system uses movie_recommendation.csv which contains:
+
+Dataset:
+
+The system uses movie_recommendation.csv, which contains:
 
 Movie titles
+
 Genres
+
 Release dates
-Overview/descriptions
-Other metadata
 
-How It Works
+Overview and descriptions
 
+Additional metadata
+
+How It Works:
 Data Preprocessing:
 
 Cleaning and normalizing movie metadata
-Handling missing values
-Feature extraction from text fields
 
+Handling missing values:
+
+Extracting text-based features
 
 Feature Engineering:
 
 TF-IDF vectorization of movie descriptions and genres
-Creating feature vectors for each movie
 
+Creation of numerical feature vectors for each movie
 
-Similarity Calculation:
+Similarity Calculation
 
-Cosine similarity between movie vectors
-Ranking movies based on similarity scores
+Cosine similarity computed between movie vectors
 
+Movies ranked based on similarity scores
 
-Recommendation Generation:
+Recommendation Generation
 
-Returns top N similar movies for a given title
-Provides genre-based alternatives
+Returns the top N similar movies for a selected title
 
+Provides genre-based alternative recommendations
 
+Usage:
 
-Usage
+Browse trending movies on the home page
 
-Browse Movies: View trending movies on the home page
-Search: Use the search bar to find specific movies by title
-View Details: Click on any movie to see its full details
-Get Recommendations:
+Search for movies by title
 
-View "Similar Movies (TF-IDF)" for content-based recommendations
-Check "More Like This (Genre)" for genre-based suggestions
+View detailed information for a selected movie
 
+Explore recommendations:
 
+Similar Movies (TF-IDF)
 
-Key Algorithms
+Genre-Based suggestions
+
+Key Algorithms:
 TF-IDF Vectorization
+
 Converts movie descriptions into numerical vectors based on term frequency and inverse document frequency.
+
 Cosine Similarity
-Measures the cosine of the angle between two vectors to determine similarity:
-similarity = cos(θ) = (A · B) / (||A|| × ||B||)
-Future Enhancements
+
+Measures similarity between two vectors:
+
+similarity = (A · B) / (||A|| × ||B||)
+
+Future Enhancements:
 
 Collaborative filtering integration
+
 User rating system
-Personalized recommendations based on watch history
+
+Personalized recommendations using watch history
+
 Movie trailers and streaming links
+
 Advanced filters (year, rating, language)
+
 Hybrid recommendation approach
 
-Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Contributing:
+
+Contributions are welcome.
+Please feel free to fork the repository and submit a pull request.
+
+License:
+
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
+
+Author
+
+Mahaveer
+GitHub: https://github.com/mahaveer116
